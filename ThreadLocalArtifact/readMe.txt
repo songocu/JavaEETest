@@ -1,0 +1,1 @@
+Example taken from  http://tutorials.jenkov.com/java-concurrency/threadlocal.html 
