@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee id="1">
+    <address>
+        <bloc>A</bloc>
+        <number>100</number>
+        <street>Buridava</street>
+    </address>
+    <name>Vimal Jaiswal</name>
+    <salary>400.0</salary>
+</employee>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<address>
+    <bloc>A</bloc>
+    <number>100</number>
+    <street>Buridava</street>
+</address>
