@@ -1,0 +1,87 @@
+Read - Clean Code book - Martin Cecil
+
+http://localhost:8080/testREST/rest/testRest/result/1
+
+
+Design Patterns - de pe Wikipedia
+
+Exceptiile sunt tratate ca Rollback (detectata de Proxy)
+Pentru Checked Exception - poate sa faca, sau poate sa nu faca Rollback
+                         - daca e pusa o anotare @ApplicationException - 
+ Tema
+  - aruncati un Application Exception si procesati Application Ex(in metode diferite) lasand transactia sa dea commit
+  - --------------------------------------------------------------------------------- marcati transactia sa faca rollback
+
+
+  Cu maven, si dependinta doar de Junit
+  1 ora - 1 exemplu cu Java.Lang.Proxy - citim pe net si facem un exemplu
+  1 ora - Thread Local
+  
+  Unit Teste pentru fiecare
+  
+  Reflection - o aplicatie Maven, dependinta JUnit
+    - toate metodele, toate campurile si urmatoarele anotatii de pe campuri si de pe metode, si toate atributele de pe campuri (private static)
+    - contruim o instanta de clasa cu reflection, prin chemare de constructor si cu parametri si fara parametri
+    - method invocation
+    - un camp privat, sa ii schimbam valoarea cu reflection
+    
+    
+ Folosing Java Assistul (cglib) - generat clasa si folosim o metoda din clasa aia la rulare
+ Generat de clasa folosind JDK-ul (Compiler)
+ 
+ Interceptoare
+ - interceptor serviciu rest
+ - interceptor metoda de EJB ()
+ - interceptor de modificari de entitati (entity listener)
+ 
+ *****************************************************************************
+ 
+ Java Reflection
+ - descover si introspection
+ - toate datele membru, constructorii, metodele dintr-o clasa. 
+ - Toate interfetele care implementeaza clasa
+ - toate anotarile de pe clasa
+ - testati method invocation prin reflection
+ - creati o instanta invocand prin reflection un constructor (chiar si privat)
+ - incercati sa schimbati valoarea unui camp prin reflection 
+ 
+ 
+ Java Lang Reflect Proxy
+  - definiti o interfata si o clasa care implementeaza o metoda
+  - creati un proxi peste acea interfata care isi deleaga munca la o instanta 
+  - de observat ca proxy se foloseste de reflection, si ca deleaga treaba la clasa mea
+  
+  
+Java Lang Thread Local
+  - definim un pull de thereduri, threadurile ruleaza ceva, niste runnabeluri
+  - verify that each thread request a value for his own from Thread Local  
+  
+Java Assist CGLIB
+  - provided: one interface with one method
+  - generate at runtime a class definition which implements the provided interface
+  - load the class definition, using the class loader
+  - create a class instance
+  - cast the created class instance to the implemented interface
+  - invoke the interface method
+  - verify the result
+  
+  - add logging capabilities to an existing class
+  
+Java Validation
+  - anotari pt check-uri. De ex, check for not null
+  - anotari pentru bean-uri, poate valida parametri la metode, folosing interceptori
+  - este si stand-alone tehnologia asta
+  - proiect Maven care sa importe tehnologia javax.validation
+  
+  
+Java XML - 3 proiectele
+  - serializare
+  - deserializare
+  - citire
+  - 1. 1 bean cu anotatii de xml, construiesc instante de beanurile astea si le scriu in xml
+  - 2. am 1 xml, citesc xml-ul si citesc beanurile din Java
+  -3. Sa caut un tag dupa nume, sa extraga diferite chestii si sa le afiseze la consola
+  
+  - tehnologii: jaxb(java api for xml binding) - serializare, deserializare si o echivalenta intre class model-xsd
+                jaxp (java api for xml parser. SAX sau DOM api) - doar parsare
+                xpath - pentru parsare

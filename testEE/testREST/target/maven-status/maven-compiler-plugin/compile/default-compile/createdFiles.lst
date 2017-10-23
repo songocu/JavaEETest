@@ -1,0 +1,5 @@
+interceptor\Interceptor.class
+rest\services\RestService.class
+interceptor\MyInterceptor.class
+rest\model\json\ResultJson.class
+rest\ApplicationConfig.class
