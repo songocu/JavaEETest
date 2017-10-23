@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>testEE</name>
+	<name>trainingJPA</name>
 	<comment></comment>
 	<projects>
-		<project>testEAR</project>
-		<project>testEJB</project>
-		<project>testJPA</project>
-		<project>testREST</project>
-		<project>testWeb</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

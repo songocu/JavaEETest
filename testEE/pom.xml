@@ -18,6 +18,7 @@
 		<module>testEAR</module>
 		<module>testJPA</module>
 		<module>testREST</module>
+		<module>testThink</module>
 	</modules>
 
 	<dependencyManagement>
