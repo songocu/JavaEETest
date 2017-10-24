@@ -14,7 +14,8 @@ public abstract class TransactionalSetup extends Setup {
 	}
 	@After
 	public void afterEachTest(){
-		em.getTransaction().rollback();
+		em.getTransaction().commit();
+//		em.getTransaction().rollback();
 		em.close();
 	}
    

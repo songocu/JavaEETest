@@ -1,0 +1,1 @@
+Example taken from:  http://tomee.apache.org/examples-trunk/jpa-enumerated/ 

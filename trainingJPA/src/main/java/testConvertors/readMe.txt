@@ -1,0 +1,1 @@
+Example taken from: https://www.thoughts-on-java.org/jpa-21-how-to-implement-type-converter/ 
