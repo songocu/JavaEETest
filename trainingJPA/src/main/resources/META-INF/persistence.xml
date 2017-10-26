@@ -15,6 +15,26 @@
         <class>testDate.DatesPojo</class>
         <class>testConvertors.RectangleEntity</class>
         <class>testListeneri.Person</class>
+        <class>testIDS.Animal</class>
+        <class>testIDS.TestIDSUsingUUID</class>
+        <class>testIDS.AnimalGenerateAutoID</class>
+        <class>onetoonerelationship.EmployeeAddressOneToOne</class>
+        <class>onetoonerelationship.Employee</class>
+        <class>onetoonerelationshipbidirectional.EmployeeBidirectional</class>
+        <class>onetoonerelationshipbidirectional.EmployeeAddressOneToOneBidirectional</class>
+        <class>onetomany.Department</class>
+        <class>onetomany.PersonOneToMany</class>
+        <class>onetomanylist.PrintQueue</class>
+        <class>onetomanylist.PrintJob</class>
+        <class>onetomanymap.DepartmentOneToManyMap</class>
+        <class>onetomanymap.PersonOneToManyMap</class>
+        <class>manytomanymap.PersonManyToManyMap</class>
+        <class>manytomanymap.DepartmentManyToManyMap</class>
+        <class>jpanamedquery.Project</class>
+        <class>jpanamedquery.Professor</class>
+        <class>jpanamedquery.Phone</class>
+        <class>jpanamedquery.DepartmentJPA</class>
+        <class>jpanamedquery.AddressJPA</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
