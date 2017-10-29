@@ -1,0 +1,55 @@
+Example for Criteria Api is from: https://www.tutorialspoint.com/jpa/jpa_criteria_api.htm 
+
+Read until end of file for CriteriaApi with MetaModel.
+
+This type of Qury is very important because if you modify the classes, you can see at compile time, where the error are, because is not using only String's like the others.
+I have a test where Criteria Api with MetaData is used, named TestCriteriaAPIMetamodel.java, taken from https://www.thoughts-on-java.org/static-metamodel/ - this site
+  has also video's on the same page, for each tutorial. Beside the informations from the site, I had to add to pom.xml few line to generate the target->generated-sources->annotations.
+  Simple adding of 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+			<version>5.2.10.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		
+   Was not enough, because only with this, the sources with _ were generated only at compile, and were not saved. To save them I add to the pom.xml:
+   
+   	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArguments>
+						<processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>target/annotations</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	!!!And this was also not enough, and I had to set on Eclipse from Properties of Project -> JavaBuildPath->Source , and I add here the target/generated-sources/annotation
+   
