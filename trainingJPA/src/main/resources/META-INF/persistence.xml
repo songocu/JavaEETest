@@ -35,6 +35,7 @@
         <class>jpanamedquery.Phone</class>
         <class>jpanamedquery.DepartmentJPA</class>
         <class>jpanamedquery.AddressJPA</class>
+        <class>criteriaapi.CriteriaAPIEmployee</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
