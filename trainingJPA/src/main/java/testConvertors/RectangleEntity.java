@@ -1,7 +1,5 @@
 package testConvertors;
 
-import java.awt.Color;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;

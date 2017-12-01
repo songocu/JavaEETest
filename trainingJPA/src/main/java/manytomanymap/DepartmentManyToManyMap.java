@@ -10,7 +10,10 @@ import javax.persistence.ManyToMany;
 
 @Entity
 public class DepartmentManyToManyMap implements java.io.Serializable{
-  @Id
+
+	private static final long serialVersionUID = 4117172295951473690L;
+
+@Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private long id;
   

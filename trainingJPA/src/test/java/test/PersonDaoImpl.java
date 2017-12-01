@@ -1,8 +1,6 @@
 package test;
 import java.util.List;
 
-import javax.persistence.TypedQuery;
-
 import org.junit.Test;
 
 import jpanamedquery.AddressJPA;
@@ -16,18 +14,17 @@ public class PersonDaoImpl extends TransactionalSetup{
   public void test() {
     prepareData();
     
-    Object l = em.createNamedQuery("findSalary").getResultList().get(0);
     List<Phone> resultList = em.createNamedQuery("findAllPhones", Phone.class).getResultList();
     for (Phone phone : resultList) {
 		printResult(phone);
 	}
     
-    List resultList2 = em.createNamedQuery("Phone.nativeSQL").getResultList();
+    List<Phone> resultList2 = em.createNamedQuery("Phone.nativeSQL", Phone.class).getResultList();
     for (Object object : resultList2) {
 		printResult(object);
 	}
     
-    List<Phone> resultList3 = em.createNamedQuery("Phone.getAllProfesors").getResultList();
+    List<Phone> resultList3 = em.createNamedQuery("Phone.getAllProfesors", Phone.class).getResultList();
     for (Phone phone : resultList3) {
 		System.out.println(phone + " With Person: " + phone.getProfessor());
 	}
@@ -35,7 +32,7 @@ public class PersonDaoImpl extends TransactionalSetup{
     em.flush();
     em.clear();
     
-    List<Phone> resultList4 = em.createNamedQuery("Phone.getSomeInfo").getResultList();
+    List<Phone> resultList4 = em.createNamedQuery("Phone.getSomeInfo", Phone.class).getResultList();
     for (Phone phone : resultList4) {
 		System.out.println(phone.getType() + "**********" + phone.getProfessor());
 	}

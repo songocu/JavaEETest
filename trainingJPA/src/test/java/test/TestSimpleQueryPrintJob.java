@@ -12,7 +12,7 @@ public class TestSimpleQueryPrintJob extends TransactionalSetup {
 	public void test(){
 		
 		prepareData();
-		List<PrintJob> listPrintJob = em.createQuery("SELECT e FROM PrintJob e").getResultList();
+		List<PrintJob> listPrintJob = em.createQuery("SELECT e FROM PrintJob e",PrintJob.class).getResultList();
 		for (PrintJob printJob : listPrintJob) {
 			System.out.println(printJob);
 		}

@@ -12,7 +12,10 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class DepartmentOneToManyMap implements java.io.Serializable{
-  @Id
+
+	private static final long serialVersionUID = -5345319479218380131L;
+
+@Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private long id;
   

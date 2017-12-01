@@ -30,7 +30,7 @@ public class TestConnection extends TransactionalSetup {
 
 		// TEST UPDATE => READ
 		em.clear();
-		SimpleEntity existingEntity2 = em.find(SimpleEntity.class, createdEntity.getId());
+		em.find(SimpleEntity.class, createdEntity.getId());
 
 	}
 
